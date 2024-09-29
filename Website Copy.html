@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Clone</title>
+    <link rel="stylesheet" href="Website%20Copy%20CSS.css">
+    <!-- Link to a website that provides icons for use in HTML it uses specific syntax -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="navbar"> <!-- Navigation menu at the top -->
+
+        <div class="navbar-left"> <!-- the left side containing the vertical menu list -->
+            <img src="https://c10.patreonusercontent.com/4/patreon-media/p/campaign/2054414/53ac6fa68ea044dfb7f9e9050f6cbbde/eyJoIjoxMDgwLCJ3IjoxMDgwfQ%3D%3D/1.png?token-time=1728864000&token-hash=AtV5YvZAQp5Ns1XHLLmXjTeN0rqpETANnqr5IC7NORc%3D" alt="Archidekt Logo">
+            <button class="navbar-title">Archidekt</button>
+            <!-- This could probably have been a list, but I did not rly think about it, because I was using buttons instead of 'normal' text-->
+            <button>Search</button>
+            <button>Decks</button>
+            <button>News</button>
+            <button>Collection</button>
+            <button>Forums</button>
+        </div>
+
+        <div class="navbar-right"> <!-- Right side containing a small -->
+            <button>Register</button>
+            <button>Login</button>
+            <!-- fas fa-XXXX is the specific way to search on the website for an icon you need -->
+            <!-- <i> tag is for text in an 'alternative voice or mood' according to w3schools-->
+            <!-- Why the website specifically needs an <i> tag I do not know, but it does -->
+            <i class="fas fa-moon moon-icon"></i> <!-- Moon icon because I have replicated the website in dark-mode-->
+        </div>
+    </div>
+</header>
+
+<div class="search-section"> <!-- Middle section containing the background image, gradients, and the search bar-->
+
+    <div class="search-container"> <!-- The search bar-->
+        <i class="fas fa-search search-icon"></i> <!-- This part is a bit wonky, see CSS for more -->
+        <input type="text" placeholder="Search Decks, Cards and Users..." class="search-bar">
+    </div>
+
+    <div class="button-container"> <!-- the buttons beneath the search bar-->
+        <button class="deck-sandbox">
+            <i class="fas fa-flask"></i> Deck Sandbox
+        </button>
+        <button class="all-decks">
+            <i class="fas fa-globe"></i> All Decks
+        </button>
+    </div>
+</div>
+
+<section id="recent-decks">
+    <h2>Recent Decks</h2>
+    <div class="deck-container">
+        <!-- Start of a single deck container -->
+        <div class="deck_1">
+            <div class="deck-info">
+                <h3>SCHLOB</h3>
+                <p>by Definitely not a spider</p>
+            </div>
+        </div>
+        <!-- End of a single deck conta -->
+        <div class="deck_2">
+            <div class="deck-info">
+                <h3>Here be dragons!</h3>
+                <p>by Benjamin</p>
+            </div>
+        </div>
+
+        <div class="deck_3">
+            <div class="deck-info">
+                <h3>Yeah, 4 more</h3>
+                <p>by Ane</p>
+            </div>
+        </div>
+
+        <div class="deck_4">
+            <div class="deck-info">
+                <h3>Fisting Time</h3>
+                <p>by Nicklas</p>
+            </div>
+        </div>
+
+        <div class="deck_5">
+            <div class="deck-info">
+                <h3>BOOOM HEHE HUHU MANAAA</h3>
+                <p>by Felix</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+
+</html>

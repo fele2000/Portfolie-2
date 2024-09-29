@@ -1,0 +1,219 @@
+body { /* for some reason my website has a white outline without the margin 0 */
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding: 10px 20px;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 2rem;
+}
+
+.navbar-left img { /* Adjusting icon to the left of 'Archidekt'*/
+    height: 40px; /* Maybe use rem? */
+    margin-right: 20px;
+}
+
+.navbar-left button { /* The text in the left side of the navbar */
+    background: none;
+    border: none;
+    color: white;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.navbar-left button:not(.navbar-title) { /* Only want the small text to be bolder */
+    font-weight: bolder;
+}
+
+.navbar-left button:not(.navbar-title):hover {
+    color: orange; /* This is to make sure all the nav menu text except the 'Archidekt' gets orange on hover*/
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right button { /* Text in the right side of the navbar */
+    margin-left: 15px;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer; /* Changes the mouse cursor when object is hovered */
+    font-weight: bold;
+}
+
+.navbar-right button:hover {
+    background-color: #777;
+}
+
+.moon-icon {
+    margin-left: 15px;
+    color: white;
+    font-size: 25px; /* It counts as text so i resize using font-size */
+}
+
+.search-section { /* This took some time to get right with the gradiant and the image working together in the background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 30rem;
+    background:
+            linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* Red, Green, Blue and Alpha */
+            linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0)), /* I only use alpha since i want black */
+            url(https://archidekt.com/images/archidekt_small.webp); /* Background image URL */
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 15px 40px; /* Increasing the height of the search bar*/
+    border: none;
+    border-radius: 5px;
+    background-color: #303030;
+    color: white;
+    text-align: left;
+}
+
+.search-icon {
+    /* It has now disappeared and I cant seems to make it reappear */
+    /* I have made it reappear, but this whole part does not work without absolute position on my PC */
+    position: absolute;
+    right: 38.5vw;
+    display: flex;
+    align-items: center;
+    color: black;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between buttons */
+    justify-content: center; /
+}
+
+.button-container button {
+    padding: 10px 15px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Curved borders */
+    cursor: pointer;
+}
+
+.button-container button:hover {
+    background-color: #777;
+}
+
+.button-container i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.button-container .deck-sandbox {
+    background-color: orange;
+}
+
+#recent-decks { /* Used id just to remember it */
+    padding: 20px;
+    background-color: black;
+    padding-bottom: 20vh; /* normally the website would continue downwards, i just fill it out */
+}
+
+#recent-decks h2 {
+    color: white;
+    margin-left: 2.65rem;
+}
+
+.deck-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div[class^='deck_']{ /* Using RegEx expressions to hit all classes beginning with deck_ */
+    background-size: cover;
+    background-position: center;
+    border: 1px solid grey;
+    border-radius: 8px;
+    height: 15rem;
+    width: 20rem;
+    /* The rest here is to make the text be at the bottom left corner */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.deck-info {
+    color: white;
+}
+
+.deck-info h3, .deck-info p {
+    margin-left: 10px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.deck-container .deck_1 {
+    background: linear-gradient(to top, rgba(50, 50, 50, 1), rgba(50, 50, 50, 1) 40%, transparent 55%),
+    url(https://cdnb.artstation.com/p/assets/images/images/065/274/069/large/lorenzo-mastroianni-shelob-final.jpg?1689946775);
+    background-size: cover;
+    background-position: center;
+}
+
+.deck-container .deck_2 {
+    /* same deal as the search section, to make an image and gradiant share the background */
+    background: linear-gradient(to top, rgba(50, 50, 50, 1), rgba(50, 50, 50, 1) 40%, transparent 55%),
+                url(https://d1w82usnq70pt2.cloudfront.net/wp-content/uploads/2021/07/Magic_Tiamat.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.deck-container .deck_3 {
+    background: linear-gradient(to top, rgba(50, 50, 50, 1), rgba(50, 50, 50, 1) 40%, transparent 55%),
+    url(https://www.hipstersofthecoast.com/wp-content/uploads/2020/04/10.Gyruda-Color-Sketch-TylerJacobson.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.deck-container .deck_4 {
+    background: linear-gradient(to top, rgba(50, 50, 50, 1), rgba(50, 50, 50, 1) 40%, transparent 55%),
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfsHJGzy5AgWCidb3ymOWW3yUzDt2giv5wug&s);
+    background-size: cover;
+    background-position: center;
+}
+
+.deck-container .deck_5 {
+    background: linear-gradient(to top, rgba(50, 50, 50, 1), rgba(50, 50, 50, 1) 40%, transparent 55%),
+    url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9LRBXdwwZX1bfg5jpAZOq7CSVe4xWTlYXDA&s);
+    background-size: cover;
+    background-position: center;
+}
+
+.deck-card img { /* Make the images fill out the squares */
+    width: 100%;
+    height: auto;
+}
+
